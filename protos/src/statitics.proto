@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package statitics;
+option java_package = "com.proto.statistics";
+option java_multiple_files = true;
+
+message StatisticsRequest{
+    int32 userId = 1;
+    int32 orgId = 2;
+    int64 maleCount = 3;
+    int64 femaleCount = 4;
+    int64 kidCount = 5;
+    int64 adultCount = 6;
+}
+message StatisticsResponse{
+
+}
+
+message FetchStatisticsRequest {
+    int32 userId = 1;
+    int32 orgId = 2;
+    int64 from = 3;
+    int64 to = 4;
+}
+
+
+message FetchStatisticsResponse {
+    int32 orgId = 1;
+    int64 maleCount = 2;
+    int64 femaleCount = 3;
+    int64 kidCount = 4;
+    int64 adultCount = 5;
+}
+
+service StatisticsService{
+    rpc pushStatistics(StatisticsRequest) returns (StatisticsResponse){};
+    rpc fetchStatistics(FetchStatisticsRequest) returns (FetchStatisticsResponse) {};
+}

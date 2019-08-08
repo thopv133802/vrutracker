@@ -1,0 +1,63 @@
+version: "3"
+networks:
+  vrutracker:
+    driver: bridge
+services:
+  user-service:
+    container_name: user-service
+    build:
+      context: user-service
+      dockerfile: Dockerfile
+    image: thopv133802/vrutracker-user-service
+    ports:
+      - 18082:18082
+    networks:
+      - vrutracker
+  organization-service:
+    container_name: organization-service
+    build:
+      context: organization-service
+      dockerfile: Dockerfile
+    image: thopv133802/vrutracker-organization-service
+    ports:
+      - 18083:18083
+    depends_on:
+      - user-service
+    links:
+      - user-service:user-service
+    networks:
+      - vrutracker
+  statistics-service:
+    container_name: statistics-service
+    build:
+      context: statistics-service
+      dockerfile: Dockerfile
+    image: thopv133802/vrutracker-statistics-service
+    ports:
+      - 18081:18081
+    depends_on:
+      - user-service
+      - organization-service
+    links:
+      - user-service:user-serivce
+      - organization-service:organization-service
+    networks:
+      - vrutracker
+  api-service:
+    container_name: api-service
+    build:
+      context: api-service
+      dockerfile: Dockerfile
+    image: thopv133802/vrutracker-api-service
+    networks:
+      - vrutracker
+    ports:
+      - "8080:8080"
+    depends_on:
+      - organization-service
+      - statistics-service
+      - user-service
+    links:
+      - organization-service:organization-service
+      - statistics-service:statistics-service
+      - user-service:user-service

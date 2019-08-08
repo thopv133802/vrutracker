@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/api-service/api-service.iml" filepath="$PROJECT_DIR$/api-service/api-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/api-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/api-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/organization-service/organization-service.iml" filepath="$PROJECT_DIR$/organization-service/organization-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/organization-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/organization-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/organization-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/organization-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/people-counter.iml" filepath="$PROJECT_DIR$/people-counter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/protos/protos.iml" filepath="$PROJECT_DIR$/protos/protos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/statistics-service/statistics-service.iml" filepath="$PROJECT_DIR$/statistics-service/statistics-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/statistics-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/statistics-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/statistics-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/statistics-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-service/user-service.iml" filepath="$PROJECT_DIR$/user-service/user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/user-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/user-service.test.iml" />
+    </modules>
+  </component>
+</project>

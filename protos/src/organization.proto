@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package organization;
+option java_package = "com.proto.organization";
+option java_multiple_files = true;
+
+message CreateOrganizationRequest {
+    int32 userId = 1;
+    string name = 2;
+}
+
+message CreateOrganizationResponse {
+    int32 orgId = 1;
+}
+
+message OrganizationProtobuf {
+    int32 orgId = 1;
+    string name = 2;
+}
+
+message ListOrganizationRequest {
+    int32 userId = 1;
+}
+
+message ListOrganizationResponse {
+    repeated OrganizationProtobuf organization = 1;
+}
+
+message BelongToRequest {
+    int32 userId = 1;
+    int32 orgId = 2;
+}
+message BelongToResponse {
+    bool belongTo = 1;
+}
+
+service OrganizationService {
+    rpc createOrganization(CreateOrganizationRequest) returns (CreateOrganizationResponse) {}
+    rpc listOrganizations(ListOrganizationRequest) returns (ListOrganizationResponse) {}
+    rpc belongTo(BelongToRequest) returns (BelongToResponse) {}
+}
